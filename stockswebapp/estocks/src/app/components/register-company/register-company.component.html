@@ -1,0 +1,111 @@
+<app-loader *ngIf="loading"></app-loader>
+<div class="container m-5 w-75 border shadow mx-auto">
+    <div class="py-4">
+        <div class="text-center">
+            <h2 class="mt-3">Reister a Company</h2>
+        </div>
+        <div class="text-center mb-4">
+            <form [formGroup]="registrationForm">
+                <div class="row w-50 mx-auto flex-nowrap">
+                    <div class="col-6 px-0">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Company Code</mat-label>
+                            <input matInput formControlName="companyCode" maxlength="8"
+                                placeholder="Enter Company Code" />
+                            <mat-error *ngIf="registrationForm.get('companyCode')?.hasError('pattern')">
+                                Company Code can only be Alphanumeric.
+                            </mat-error>
+                            <mat-error *ngIf="registrationForm.get('companyCode')?.hasError('minlength')">
+                                Company Code should be atleast 4 characters long.
+                            </mat-error>
+                            <mat-error *ngIf="registrationForm.get('companyCode')?.hasError('required')">
+                                Company Code is required.
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-6 px-0">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Company CEO</mat-label>
+                            <input matInput formControlName="companyCeo" maxlength="50" placeholder="Enter CEO Name" />
+                            <mat-error *ngIf="registrationForm.get('companyCeo')?.hasError('pattern')">
+                                Only Dot, Apostrophe and Space allowed along with Alphabet.
+                            </mat-error>
+                            <mat-error *ngIf="registrationForm.get('companyCeo')?.hasError('minlength')">
+                                CEO Name should be atleast 2 characters long.
+                            </mat-error>
+                            <mat-error *ngIf="registrationForm.get('companyCeo')?.hasError('required')">
+                                CEO Name is required.
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row w-50 mx-auto flex-nowrap">
+                    <div class="col-12 px-0">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Company Name</mat-label>
+                            <input matInput formControlName="companyName" placeholder="Enter Company Name" />
+                            <mat-error *ngIf="registrationForm.get('companyName')?.hasError('pattern')">
+                                Can be alphanumeric along with special charcters Dot, Apostrophe and Space.
+                            </mat-error>
+                            <mat-error *ngIf="registrationForm.get('companyName')?.hasError('minlength')">
+                                Company Name should be atleast 2 characters long.
+                            </mat-error>
+                            <mat-error *ngIf="registrationForm.get('companyName')?.hasError('required')">
+                                Company Name is required.
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row w-50 mx-auto flex-nowrap">
+                    <div class="col-6 px-0">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Stock Exchange</mat-label>
+                            <mat-select formControlName="stockExchange">
+                                <mat-option value="NSE">National Stock Exchange (NSE)</mat-option>
+                                <mat-option value="BSE">Bombay Stock Exchange (BSE)</mat-option>
+                                <mat-option value="CSE">Calcutta Stock Exchange (CSE)</mat-option>
+                                <mat-option value="ICEX">Indian Commodity Exchange (ICEX)</mat-option>
+                                <mat-option value="MSE">Metropolitan Stock Exchange (MSE)</mat-option>
+                                <mat-option value="MCX">Multi Commodity Exchange (MCX)</mat-option>
+                                <mat-option value="NCDEX">National Commodity & Derivatives (NCDEX)</mat-option>
+                            </mat-select>
+                            <mat-error *ngIf="registrationForm.get('stockExchange')?.hasError('required')">
+                                Stock Exchange is required.
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-6 px-0">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Company Turnover</mat-label>
+                            <input matInput formControlName="turnover" placeholder="Enter Turnover" />
+                            <mat-error *ngIf="registrationForm.get('turnover')?.hasError('pattern')">
+                                Must be a numeric value.
+                            </mat-error>
+                            <mat-error *ngIf="registrationForm.get('turnover')?.hasError('min')">
+                                Turnover should be greater than or equal to 10Cr.
+                            </mat-error>
+                            <mat-error *ngIf="registrationForm.get('turnover')?.hasError('required')">
+                                Turnover is required.
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row w-50 mx-auto flex-nowrap">
+                    <div class="col-6 px-0">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Website</mat-label>
+                            <input matInput formControlName="website" placeholder="Enter Website" />
+                            <mat-error *ngIf="registrationForm.get('website')?.hasError('required')">
+                                Website is required.
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row w-50 mx-auto flex-nowrap my-4 justify-content-center">
+                    <button type="submit" mat-raised-button color="primary" class="white submit-btn"
+                        [disabled]="!registrationForm.valid" (click)="submit()">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

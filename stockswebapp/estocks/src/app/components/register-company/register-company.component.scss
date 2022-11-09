@@ -1,0 +1,16 @@
+.container {
+    border-radius: 10px;
+}
+mat-form-field {
+    width: 98%;
+}
+.submit-btn {
+    width: auto;
+}
+:host ::ng-deep .mat-form-field-wrapper {
+    padding-bottom: 0em;
+    .mat-form-field-subscript-wrapper {
+        position: static;
+        padding: 0 0.5em !important;
+    }
+}

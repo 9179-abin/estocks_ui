@@ -1,0 +1,39 @@
+<app-loader *ngIf="loading"></app-loader>
+<button class="close" mat-icon-button mat-dialog-close>
+    <mat-icon>close</mat-icon>
+</button>
+<h1 mat-dialog-title class="text-center">Login</h1>
+<div mat-dialog-content>
+    <form [formGroup]="loginForm" class="login-form">
+        <div class="row mx-auto flex-nowrap">
+            <div class="col-12 px-0">
+                <mat-form-field appearance="outline">
+                    <mat-label>Username</mat-label>
+                    <input type="text" matInput formControlName="userName" placeholder="Enter Username"
+                        cdkFocusInitial />
+                    <mat-error *ngIf="loginForm.get('userName')?.hasError('required')">
+                        Username is required.
+                    </mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row mx-auto flex-nowrap">
+            <div class="col-12 px-0">
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input type="password" matInput formControlName="password" placeholder="Enter Password" />
+                    <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
+                        Password is required.
+                    </mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row mx-auto flex-nowrap mt-3 justify-content-center w-fit">
+            <button type="submit" mat-raised-button color="primary" class="white" [disabled]="!loginForm.valid"
+                (click)="submit()">Login</button>
+        </div>
+        <div class="row mx-auto flex-nowrap mt-2 mb-3 justify-content-center w-fit">
+            <a href="javascript:void(0)" class="text-center" mat-dialog-close>Cancel</a>
+        </div>
+    </form>
+</div>

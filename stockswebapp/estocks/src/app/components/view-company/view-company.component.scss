@@ -1,0 +1,33 @@
+.container {
+    border-radius: 10px;
+    min-height: 500px;
+}
+.w-90 {
+    width: 90%;
+}
+.row {
+    flex-wrap: nowrap;
+}
+.bg-light {
+    background-color: #f4f4f4 !important;
+}
+.w-fit {
+    width: fit-content !important;
+}
+.confirm-icon {
+    color: #4bb543;
+    mat-icon {
+        font-weight: bolder !important;
+    }
+}
+.cancel-icon {
+    color: #d11a2a;
+}
+:host ::ng-deep mat-spinner.update-progress {
+    width: 20px !important;
+    height: 20px !important;
+    svg {
+        width: 20px !important;
+        height: 20px !important;
+    }
+}

@@ -1,0 +1,19 @@
+<!-- <p>search-company works!</p> -->
+<button *ngIf="!searchFocused" mat-icon-button matTooltip="Search" (click)="onSearchClick()">
+    <mat-icon>search</mat-icon>
+</button>
+<mat-form-field class="w-fit" appearance="legacy" *ngIf="searchFocused">
+    <input id="search-input" matInput [(ngModel)]="searchInput" />
+    <button matSuffix mat-icon-button aria-label="Searching" class="search-span">
+        <mat-spinner class="search-progress" *ngIf="isSearching"></mat-spinner>
+    </button>
+    <button *ngIf="!isSearching" matSuffix mat-icon-button aria-label="Cancel"
+        (click)="searchFocused = false;" class="cancel-icon">
+        <mat-icon>close</mat-icon>
+    </button>
+    <button type="submit" *ngIf="!isSearching && searchInput.length > 0" matSuffix mat-icon-button aria-label="Search"
+        (click)="searchCompany()" class="confirm-icon">
+        <!-- <mat-icon>search</mat-icon> -->
+        <mat-icon>send</mat-icon>
+    </button>
+</mat-form-field>

@@ -1,0 +1,14 @@
+<mat-toolbar color="primary" role="heading">
+    <button mat-button (click)="onClick('logo')">
+        <span class="title white text-danger ms-2">eStocks</span>
+    </button>
+    <div class="d-inline-flex ms-auto align-items-center" >
+        <app-search-company *ngIf="isLoggedIn()"></app-search-company>
+        <button *ngIf="!isLoggedIn()" mat-icon-button matTooltip="Login" (click)="onClick('login')">
+            <mat-icon>login</mat-icon>
+        </button>
+        <button *ngIf="isLoggedIn()" class="ms-2" mat-icon-button matTooltip="Log Out" (click)="onClick('logout')">
+            <mat-icon>logout</mat-icon>
+        </button>
+    </div>
+</mat-toolbar>

@@ -1,0 +1,44 @@
+.container {
+    border-radius: 10px;
+    min-height: 500px;
+}
+.w-90 {
+    width: 90%;
+}
+.edit-icon {
+    color: #0071bc;
+}
+.confirm-icon {
+    color: #4bb543;
+    mat-icon {
+        font-weight: bolder !important;
+    }
+}
+.delete-icon,
+.cancel-icon {
+    color: #d11a2a;
+}
+.mat-column-stockPrice {
+    width: 150px;
+}
+.mat-column-deleteAction {
+    text-align: end;
+}
+.delete-btn {
+    background-color: #d11a2a !important;
+    color: #ffffff !important;
+}
+:host ::ng-deep mat-spinner.update-progress {
+    width: 20px !important;
+    height: 20px !important;
+    svg {
+        width: 20px !important;
+        height: 20px !important;
+    }
+}
+.bg-light {
+    background-color: #f4f4f4 !important;
+}
+:host ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-infix {
+    width: 80px;
+}

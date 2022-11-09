@@ -1,0 +1,112 @@
+[
+    {
+        "companyCode": "COMP001",
+        "companyName": "Company001",
+        "companyCeo": "CEO001",
+        "turnover": 150000000,
+        "website": "company001.com",
+        "stockExchange": "NSE",
+        "stockList": [
+            {
+                "stockPrice": 124.53,
+                "stockPriceUpdatedOn": "1652466767574"
+            },
+            {
+                "stockPrice": 724.53,
+                "stockPriceUpdatedOn": "1652466801415"
+            },
+            {
+                "stockPrice": 394.53,
+                "stockPriceUpdatedOn": "1652466815324"
+            }
+        ]
+    },
+    {
+        "companyCode": "COMP002",
+        "companyName": "Company002",
+        "companyCeo": "CEO002",
+        "turnover": 150000000,
+        "website": "company002.com",
+        "stockExchange": "BSE",
+        "stockList": [
+            {
+                "stockPrice": 124.53,
+                "stockPriceUpdatedOn": "1652466767574"
+            },
+            {
+                "stockPrice": 724.53,
+                "stockPriceUpdatedOn": "1652466801415"
+            },
+            {
+                "stockPrice": 394.53,
+                "stockPriceUpdatedOn": "1652466815324"
+            }
+        ]
+    },
+    {
+        "companyCode": "COMP003",
+        "companyName": "Company003",
+        "companyCeo": "CEO003",
+        "turnover": 150000000,
+        "website": "company003.com",
+        "stockExchange": "NSE",
+        "stockList": [
+            {
+                "stockPrice": 124.53,
+                "stockPriceUpdatedOn": "1652466767574"
+            },
+            {
+                "stockPrice": 724.53,
+                "stockPriceUpdatedOn": "1652466801415"
+            },
+            {
+                "stockPrice": 394.53,
+                "stockPriceUpdatedOn": "1652466815324"
+            }
+        ]
+    },
+    {
+        "companyCode": "COMP004",
+        "companyName": "Company004",
+        "companyCeo": "CEO004",
+        "turnover": 150000000,
+        "website": "company004.com",
+        "stockExchange": "NSE",
+        "stockList": [
+            {
+                "stockPrice": 124.53,
+                "stockPriceUpdatedOn": "1652466767574"
+            },
+            {
+                "stockPrice": 724.53,
+                "stockPriceUpdatedOn": "1652466801415"
+            },
+            {
+                "stockPrice": 394.53,
+                "stockPriceUpdatedOn": "1652466815324"
+            }
+        ]
+    },
+    {
+        "companyCode": "COMP005",
+        "companyName": "Company005",
+        "companyCeo": "CEO005",
+        "turnover": 150000000,
+        "website": "company005.com",
+        "stockExchange": "NSE",
+        "stockList": [
+            {
+                "stockPrice": 124.53,
+                "stockPriceUpdatedOn": "1652466767574"
+            },
+            {
+                "stockPrice": 724.53,
+                "stockPriceUpdatedOn": "1652466801415"
+            },
+            {
+                "stockPrice": 394.53,
+                "stockPriceUpdatedOn": "1652466815324"
+            }
+        ]
+    }
+]
